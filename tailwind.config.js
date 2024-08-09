@@ -57,6 +57,11 @@ module.exports = {
         darkPurple: '#6a0dad', // Customize your color here
         lightPurple: '#f3e5f5',
       },
+      rotate: {
+        '145': '145deg',  // Custom rotation value
+        '10': '10deg',  // Another example, add more as needed
+        // Add more custom rotation values if needed
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
