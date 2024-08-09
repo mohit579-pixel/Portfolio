@@ -4,7 +4,7 @@ import React from 'react';
 const Hero = () => {
   return (
     <>
-      <section className="absolute min-h-full min-w-full bg-gradient bg-black z-2 flex items-center  font-sans">
+      <section className="absolute min-h-[107vh] md:min-h-full min-w-full bg-gradient bg-black z-2 flex items-center  font-sans">
         <div className="flex-col p-10 md:p-20 space-y-4 text-left">
           <FadeText
             className="text-4xl font-medium text-white"
