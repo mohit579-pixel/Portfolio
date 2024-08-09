@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-gradient {
+  background: radial-gradient(circle at 405% 125%, #a100ff, rgba(249, 249, 249, 0));
+}
+
+.div-gradient {
+  background: linear-gradient(45deg, rgba(226, 169, 233, 1), rgba(215, 114, 233, 1), rgba(198, 0, 255, 1))
+}
+
+.text-outline {
+  /* color: transparent; */
+  -webkit-text-stroke: 0.8px #6a0dad;
+  /* Purple color */
+  /* opacity: 0.; */
+  /* position: relative; */
+  z-index: 10;
+}
