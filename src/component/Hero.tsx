@@ -2,14 +2,20 @@ import React from 'react';
 import { FadeText } from '@/components/magicui/fade-text';
 import SocialButtons from './SocialButtons';
 import Profile from './Profile';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from 'src/redux/store';
+import Skills from './Skills';
 
 const Hero = ({ imageRef }) => {
+  const dispatch = useDispatch();
+  const isSidebarOpen = useSelector((state: RootState) => state.sidebar.isSidebarOpen);
+
   return (
     <>
-      <section className="absolute min-h-full min-w-full bg-gradient bg-black z-2 flex items-center justify-center font-sans">
-        <div className="flex-col p-5 md:p-20 space-y-4 text-left">
+      <section className="absolute min-h-full min-w-full bg-gradient bg-black z-2 flex-row md:flex items-center justify-center font-sans">
+        <div className="flex-col p-5 mt-14 md:mt-0 md:p-20 space-y-4 text-left">
           <FadeText
-            className="text-4xl font-medium text-white"
+            className="md:text-4xl text-xl font-medium text-white"
             direction="up"
             framerProps={{
               show: { transition: { delay: 3.3 } },
@@ -17,7 +23,7 @@ const Hero = ({ imageRef }) => {
             text="I am Mohit"
           />
           <FadeText
-            className="text-7xl font-bold bg-gradient-to-r from-darkPurple to-white bg-clip-text text-transparent"
+            className="md:text-7xl text-4xl font-bold bg-gradient-to-r from-darkPurple to-white bg-clip-text text-transparent"
             direction="right"
             framerProps={{
               show: { transition: { delay: 3.5 } },
@@ -25,16 +31,19 @@ const Hero = ({ imageRef }) => {
             text="Web + AI&ML"
           />
           <FadeText
-            className="text-7xl font-bold bg-gradient-to-r from-darkPurple to-white bg-clip-text text-transparent"
+            className="md:text-7xl text-4xl font-bold bg-gradient-to-r from-darkPurple to-white bg-clip-text text-transparent"
             direction="down"
             framerProps={{
               show: { transition: { delay: 3.7 } },
             }}
             text="Developer"
           />
+          {!isSidebarOpen && (
+            <Profile ref={imageRef} className="md:hidden block" />
+          )}
           <FadeText
-            className="text-xl text-white font-thin"
-            direction="left"
+            className="md:text-xl text-sm text-white font-thin absolute md:bottom-36 bottom-32"
+            direction="down"
             framerProps={{
               show: { transition: { delay: 3.9 } },
             }}
@@ -47,8 +56,11 @@ const Hero = ({ imageRef }) => {
             }
           />
           <SocialButtons />
+          
         </div>
-        <Profile ref={imageRef} />
+        {!isSidebarOpen && (
+          <Profile ref={imageRef} className="hidden md:block" />
+        )}
       </section>
     </>
   );
