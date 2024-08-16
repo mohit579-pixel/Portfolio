@@ -12,7 +12,7 @@ const Hero = ({ imageRef }) => {
 
   return (
     <>
-      <section className="absolute min-h-full min-w-full bg-gradient bg-black z-2 flex-row md:flex items-center justify-center font-sans">
+      <section className=" h-[86vh] md:h-[100vh] min-w-full bg-gradient bg-black z-2 flex-row md:flex items-center justify-center font-sans">
         <div className="flex-col p-5 mt-14 md:mt-0 md:p-20 space-y-4 text-left">
           <FadeText
             className="md:text-4xl text-xl font-medium text-white"

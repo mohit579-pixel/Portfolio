@@ -18,3 +18,15 @@
   /* position: relative; */
   z-index: 10;
 }
+/* Tailwind CSS or global CSS file */
+.hero-container {
+  position: relative;
+  z-index: 10; /* Ensure Hero is above Skills */
+  min-height: 100vh; /* Adjust as necessary */
+}
+
+.skills-container {
+  position: relative;
+  z-index: 5; /* Ensure Skills is below Hero */
+  padding-top: 4rem; /* Adjust as necessary to ensure space below Hero */
+}

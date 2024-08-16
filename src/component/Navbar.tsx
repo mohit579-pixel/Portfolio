@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
   const isSidebarOpen = useSelector((state: RootState) => state.sidebar.isSidebarOpen);
 
   return (
-    <nav className="bg-transparent fixed top-0 w-full z-10 flex justify-between text-white p-5 pt-8 font-serif">
+    <nav className="bg-transparent  fixed top-0 w-full z-10 flex justify-between text-white p-5 pt-8 font-serif">
       <div className="logo flex justify-between gap-10 text-xl">
         <div>
           logo

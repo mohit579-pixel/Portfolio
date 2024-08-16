@@ -58,12 +58,12 @@ const Loading = () => {
       <div ref={navRef}>
         <Navbar />
       </div>
-      <div ref={heroRef}>
+      <div ref={heroRef} >
         <Hero imageRef={imageRef} />
       </div>
-      {/* <div ref={skillRef} className="relative z-2">
+      <div ref={skillRef} className="relative z-2">
         <Skills />
-      </div> */}
+      </div>
     </>
   );
 };
