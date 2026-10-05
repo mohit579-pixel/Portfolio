@@ -64,7 +64,7 @@ The repo includes `render.yaml`, so Render reads the settings from it.
 ### Alternatives
 
 - **Netlify:** New site from Git, build command `npm run build`, publish directory `dist`.
-- **Vercel:** Import the repo. It detects Vite (build `npm run build`, output `dist`) automatically.
+- **Vercel:** Import the repo. It detects Vite automatically, and `vercel.json` sets the build command, the output folder and long-lived cache headers for `/assets`.
 
 ## License
 
