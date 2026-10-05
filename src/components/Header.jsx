@@ -18,7 +18,7 @@ export default function Header({ dark, onToggleTheme, sound, onToggleSound, onOp
           MK
           <Timer />
         </a>
-        <div>
+        <div className="acts">
           <button
             className="btn"
             data-cur="MENU"
@@ -30,20 +30,13 @@ export default function Header({ dark, onToggleTheme, sound, onToggleSound, onOp
           </button>
           <button
             className="btn"
-            style={{ marginLeft: '.5rem' }}
             data-cur="THEME"
             aria-label={dark ? 'Switch to light theme' : 'Switch to dark theme'}
             onClick={onToggleTheme}
           >
             {dark ? 'Light' : 'Dark'}
           </button>
-          <button
-            className="btn"
-            style={{ marginLeft: '.5rem' }}
-            data-cur="SOUND"
-            aria-pressed={sound}
-            onClick={onToggleSound}
-          >
+          <button className="btn" data-cur="SOUND" aria-pressed={sound} onClick={onToggleSound}>
             Sound {sound ? 'on' : 'off'}
           </button>
         </div>

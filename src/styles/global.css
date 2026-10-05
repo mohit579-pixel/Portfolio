@@ -258,3 +258,40 @@ section.in > .wrap {
     scroll-behavior: auto;
   }
 }
+
+/* Header actions; spacing lives here so it can shrink on phones. */
+.acts {
+  display: flex;
+  gap: 0.5rem;
+  flex: none;
+}
+
+/* Phones: keep the header on one line. No physical keyboard, so no Ctrl K hint. */
+@media (hover: none) {
+  .kbd {
+    display: none;
+  }
+}
+@media (max-width: 560px) {
+  .bar .wrap {
+    gap: 0.5rem;
+  }
+  .logo {
+    white-space: nowrap;
+  }
+  .acts {
+    gap: 0.35rem;
+  }
+  .bar .btn {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.82rem;
+  }
+  .kbd {
+    display: none;
+  }
+}
+@media (max-width: 374px) {
+  .logo .mono {
+    display: none;
+  }
+}

@@ -160,3 +160,18 @@
     animation: none;
   }
 }
+
+/* Let the demo frame shrink to its column instead of growing to fit its content. */
+.pgrid > * {
+  min-width: 0;
+}
+@media (max-width: 560px) {
+  .wbody.big {
+    padding: 1rem;
+    min-height: 18rem;
+  }
+  .pnav {
+    gap: 0.6rem;
+    margin-top: 2rem;
+  }
+}

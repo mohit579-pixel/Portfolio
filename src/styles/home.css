@@ -273,3 +273,21 @@ footer h2 span {
     padding-top: 2.5rem;
   }
 }
+
+/* Narrower than the content column plus gutters: give the hero the same side
+   padding as other sections and keep its background grid inside the viewport. */
+@media (max-width: 68.5rem) {
+  .hero {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .hero::before,
+  .hero::after {
+    inset: 0;
+  }
+}
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+}
