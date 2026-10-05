@@ -1,0 +1,327 @@
+/* Shared styles for the three live demos. */
+.cal {
+  display: grid;
+  grid-template-columns: 3.4rem repeat(5, 1fr);
+  gap: 0.3rem;
+}
+.cal .h {
+  color: var(--mut);
+  text-align: center;
+  padding: 0.3rem 0;
+  font:
+    0.76rem 'Geist Mono',
+    monospace;
+}
+.cal .h.f {
+  color: var(--acc);
+}
+.cell {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: none;
+  min-height: 2.1rem;
+  font:
+    0.76rem 'Geist Mono',
+    monospace;
+  padding: 0;
+}
+.cell:hover {
+  border-color: var(--acc);
+}
+.cell.fc {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--acc) 45%, transparent);
+}
+.cell.t {
+  background: repeating-linear-gradient(45deg, var(--line) 0 4px, transparent 4px 8px);
+  color: var(--mut);
+}
+.cell.me {
+  background: var(--acc);
+  color: var(--on);
+  border-color: var(--acc);
+  font-weight: 500;
+}
+.pad {
+  position: relative;
+  height: 10.5rem;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  touch-action: none;
+  overflow: hidden;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0 calc(100% / 6 - 1px),
+    var(--line) calc(100% / 6 - 1px) calc(100% / 6)
+  );
+}
+.padl {
+  position: absolute;
+  left: 0.7rem;
+  top: 0.5rem;
+  font:
+    0.75rem 'Geist Mono',
+    monospace;
+  color: var(--mut);
+  pointer-events: none;
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+  padding: 0 0.3rem;
+  border-radius: 4px;
+}
+.hd {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  margin: -6.5px;
+  border-radius: 50%;
+  background: var(--acc);
+  pointer-events: none;
+  box-shadow: 0 0 14px var(--acc);
+}
+.hd.s {
+  width: 7px;
+  height: 7px;
+  margin: -3.5px;
+  opacity: 0.6;
+}
+.xw {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+}
+.xw canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@keyframes pl {
+  50% {
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--acc) 25%, transparent);
+  }
+}
+.fb {
+  position: absolute;
+  border: 2px solid var(--acc);
+  border-radius: 4px;
+  pointer-events: none;
+  animation: pl 2s ease-in-out infinite;
+}
+.fb span {
+  position: absolute;
+  top: -1.25rem;
+  left: -2px;
+  background: var(--bg);
+  color: var(--acc);
+  font:
+    500 0.64rem 'Geist Mono',
+    monospace;
+  padding: 0 0.3rem;
+  white-space: nowrap;
+  border-radius: 3px;
+}
+.dm select {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.5rem 0.6rem;
+  color: var(--fg);
+  font: inherit;
+  min-width: 0;
+}
+.dm input[type='range'] {
+  padding: 0;
+  border: 0;
+  background: none;
+  accent-color: var(--acc);
+}
+.lc {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.8rem;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.7rem;
+  animation: fi 0.3s ease;
+  transition: border-color 0.2s;
+  background: color-mix(in srgb, var(--panel) 75%, transparent);
+}
+.lc.sel {
+  border-color: var(--acc);
+}
+.lm {
+  grid-column: 1/-1;
+}
+.lb {
+  display: grid;
+  gap: 0.1rem;
+  min-width: 0;
+}
+.lb b {
+  font-weight: 600;
+}
+.pr2 {
+  font:
+    500 0.85rem 'Geist Mono',
+    monospace;
+  color: var(--acc);
+}
+.la {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.art {
+  position: relative;
+  width: 4.6rem;
+  height: 3.6rem;
+  border-radius: 8px;
+  overflow: hidden;
+  flex: none;
+  background: linear-gradient(135deg, hsl(var(--h) 55% 58%), hsl(calc(var(--h) + 45) 55% 32%));
+}
+.art i {
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 60%;
+  background: rgba(255, 255, 255, 0.88);
+}
+.art .Flat {
+  height: 80%;
+}
+.art .Studio {
+  height: 46%;
+  left: 28%;
+  width: 44%;
+}
+.art .Plot {
+  height: 8%;
+  left: 8%;
+  width: 84%;
+}
+.art .House {
+  height: 58%;
+  clip-path: polygon(0 38%, 50% 0, 100% 38%, 100% 100%, 0 100%);
+}
+.map {
+  position: relative;
+  height: 9.5rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background:
+    linear-gradient(var(--line) 1px, transparent 1px) 0 0/36px 36px,
+    linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0/36px 36px;
+}
+.pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.05rem 0.55rem;
+  font:
+    0.72rem 'Geist Mono',
+    monospace;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.pin.on,
+.pin:hover {
+  background: var(--acc);
+  color: var(--on);
+  border-color: var(--acc);
+  z-index: 2;
+  transform: translate(-50%, -50%) scale(1.15);
+}
+.rb {
+  display: grid;
+  grid-template-columns: 1.8rem 1fr 1.4rem;
+  gap: 0.5rem;
+  align-items: center;
+  font:
+    0.75rem 'Geist Mono',
+    monospace;
+  color: var(--mut);
+}
+.dm {
+  display: grid;
+  gap: 0.9rem;
+}
+.dm input {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.5rem 0.7rem;
+  color: var(--fg);
+  font: inherit;
+  min-width: 0;
+  flex: 1;
+}
+.row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.scanline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--acc);
+  box-shadow: 0 0 14px var(--acc);
+}
+.pr {
+  height: 0.4rem;
+  border-radius: 4px;
+  background: var(--line);
+  overflow: hidden;
+}
+.pr i {
+  display: block;
+  height: 100%;
+  background: var(--acc);
+  transition: width 0.06s linear;
+}
+.li2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.55rem 0.8rem;
+  animation: fi 0.3s ease;
+}
+.star {
+  background: none;
+  border: 0;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--line);
+  padding: 0 0.1rem;
+}
+.star.on {
+  color: var(--acc);
+}
+
+@media (max-width: 560px) {
+  .lc {
+    grid-template-columns: auto 1fr;
+  }
+  .la {
+    grid-column: 1/-1;
+    justify-content: flex-start;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fb,
+  .lc,
+  .li2 {
+    animation: none;
+  }
+}

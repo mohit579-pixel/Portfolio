@@ -1,0 +1,73 @@
+/* Custom cursor: only on devices with a precise pointer. */
+@media (hover: hover) and (pointer: fine) {
+  body.cc,
+  body.cc * {
+    cursor: none !important;
+  }
+}
+.ring,
+.dot,
+.rip {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 100;
+}
+.ring {
+  width: 34px;
+  height: 34px;
+  margin: -17px 0 0 -17px;
+  border: 1.5px solid var(--acc);
+  border-radius: 50%;
+  opacity: 0;
+  display: grid;
+  place-items: center;
+  transition:
+    opacity 0.2s,
+    width 0.2s,
+    height 0.2s,
+    margin 0.2s,
+    background 0.2s;
+}
+.ring.live {
+  opacity: 1;
+}
+.ring.big {
+  width: 66px;
+  height: 66px;
+  margin: -33px 0 0 -33px;
+  background: color-mix(in srgb, var(--acc) 16%, transparent);
+}
+.ring span {
+  font:
+    500 0.68rem 'Geist Mono',
+    monospace;
+  color: var(--acc);
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: var(--fg);
+  border-radius: 50%;
+}
+.rip {
+  font:
+    500 0.78rem 'Geist Mono',
+    monospace;
+  color: var(--acc);
+  animation: up 0.8s ease-out forwards;
+}
+@keyframes up {
+  to {
+    opacity: 0;
+    transform: translateY(-32px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rip {
+    animation: none;
+  }
+}
