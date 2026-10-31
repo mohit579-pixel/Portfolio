@@ -22,15 +22,15 @@ npm run format    # Prettier
 
 All text lives in `src/data/`, so you shouldn't need to touch components to change content.
 
-| File          | What it holds                                                                                                            |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `links.js`    | Email address, plus GitHub / LinkedIn / Blog / Resume URLs. A link appears in the footer only when its URL is filled in. |
-| `profile.js`  | Page title, hero text, the "at a glance" rows, section headings, About text, education, footer line.                     |
-| `projects.js` | The three projects: name, type, stack, badge, "What I built" text.                                                       |
-| `jobs.js`     | The experience log.                                                                                                      |
-| `skills.js`   | The toolbox categories and skills.                                                                                       |
-| `arch.js`     | The nodes of the EdgeVerve request-flow diagram.                                                                         |
-| `demos.js`    | Sample data for the demos (appointment slots, property listings, stays and reviews).                                     |
+| File          | What it holds                                                                                                         |
+| ------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `links.js`    | Email, resume path (`public/Mohit_Khandelwal_Resume.pdf`) and GitHub / LinkedIn / Blog URLs. Empty links are hidden.  |
+| `profile.js`  | Page title, hero text, the "at a glance" rows, section headings, About text, education, footer line.                  |
+| `projects.js` | The three projects: name, type, stack, badge, "What I built" text.                                                    |
+| `jobs.js`     | The experience log.                                                                                                   |
+| `skills.js`   | The toolbox categories and skills.                                                                                    |
+| `arch.js`     | The Retrieval Engine explorer: request-flow nodes and paths, plug-in code, performance techniques, delivery pipeline. |
+| `demos.js`    | Sample data for the demos (appointment slots, property listings, stays and reviews).                                  |
 
 The page `<title>`, description and social-preview tags are in `index.html`.
 

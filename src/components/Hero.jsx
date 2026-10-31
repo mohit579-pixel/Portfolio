@@ -1,4 +1,4 @@
-import { EMAIL } from '../data/links';
+import { EMAIL, RESUME_URL } from '../data/links';
 import { GLANCE, HERO } from '../data/profile';
 import Scramble from './Scramble';
 
@@ -29,6 +29,15 @@ export default function Hero({ copied, onCopy, onSeeWork }) {
         <button className="btn" data-cur="COPY" onClick={onCopy}>
           {copied ? 'Copied' : EMAIL}
         </button>
+        <a
+          className="btn"
+          style={{ textDecoration: 'none' }}
+          href={RESUME_URL}
+          download
+          data-cur="PDF"
+        >
+          {HERO.resume}
+        </a>
       </div>
       <ul className="glance">
         {GLANCE.map(([code, text, label]) => (

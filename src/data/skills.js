@@ -1,7 +1,22 @@
 export const SKILLS = {
-  Languages: ['Java', 'SQL', 'Python', 'JavaScript', 'TypeScript', 'C++', 'C'],
-  Backend: ['Spring Boot', 'REST APIs', 'Microservices', 'Node.js', 'Express.js'],
-  Databases: ['MySQL', 'PostgreSQL', 'MongoDB'],
-  Tooling: ['Git', 'Maven', 'Jenkins', 'Docker', 'CI/CD'],
-  Frontend: ['React.js', 'Redux', 'HTML/CSS', 'Bootstrap', 'Tailwind CSS'],
+  Languages: ['Java', 'C++', 'SQL', 'Python', 'JavaScript', 'TypeScript'],
+  Backend: ['Spring Boot', 'Microservices', 'REST APIs', 'Kafka', 'Redis', 'Node.js', 'Express.js'],
+  'Cloud & DevOps': [
+    'AWS EC2',
+    'Docker',
+    'Kubernetes',
+    'Jenkins',
+    'CI/CD Pipelines',
+    'Git',
+    'Maven',
+    'Linux',
+  ],
+  Databases: ['PostgreSQL', 'MySQL', 'MongoDB'],
+  Frontend: ['React.js', 'Redux', 'Tailwind CSS'],
+  Fundamentals: [
+    'Data Structures & Algorithms',
+    'Object-Oriented Design',
+    'Design Patterns',
+    'Debugging',
+  ],
 };

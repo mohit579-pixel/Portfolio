@@ -1,21 +1,35 @@
-export const SITE_TITLE = 'Mohit Khandelwal — Backend Engineer';
+export const SITE_TITLE = 'Mohit Khandelwal — Software Engineer';
 
 export const HERO = {
-  meta: '[00] Mohit Khandelwal · Backend Engineer · Bangalore',
+  meta: '[00] Mohit Khandelwal · Software Engineer · Bangalore',
   first: 'Mohit',
   last: 'Khandelwal.',
-  lead: 'I build the shared backend engines that core banking products are made from.',
-  body: 'Java and Spring Boot engineer at EdgeVerve Systems. REST APIs, business logic and microservices that downstream teams integrate and customize.',
+  lead: 'I build the Retrieval Engine that 5+ core banking products fetch their data through.',
+  body: 'Java and Spring Boot engineer at EdgeVerve (Infosys). I own it end to end: design, query optimization, Kafka events, Redis caching, Docker builds, Jenkins CI/CD and Kubernetes pods on AWS.',
   cta: "See what I've built",
+  resume: 'Download resume',
 };
 
 // [code, text, label]
 export const GLANCE = [
-  ['A-01', 'Product Engineer at EdgeVerve Systems, an Infosys subsidiary', 'Company'],
-  ['A-02', 'Builds reusable Spring Boot engines shared across core banking products', 'Backend'],
-  ['A-03', 'REST APIs, validation and business logic that other product teams integrate', 'APIs'],
-  ['A-04', 'B.E. in AI & Data Science, CGPA 9.2/10', 'Education'],
-  ['A-05', 'Developer of the Year at a competitive hackathon', 'Award'],
+  [
+    'A-01',
+    '1.5+ years as a Product Engineer at EdgeVerve Systems, an Infosys subsidiary',
+    'Company',
+  ],
+  [
+    'A-02',
+    'Built the Retrieval Engine, one Spring Boot microservice serving 5+ banking products',
+    'Backend',
+  ],
+  ['A-03', 'Kafka event publishing and Redis caching for high-volume banking data', 'Distributed'],
+  [
+    'A-04',
+    'Docker, Jenkins CI/CD and Kubernetes pods on AWS EC2, one config per product',
+    'DevOps',
+  ],
+  ['A-05', 'B.E. in AI & Data Science, CGPA 9.2/10', 'Education'],
+  ['A-06', 'Developer of the Year at a competitive hackathon', 'Award'],
 ];
 
 export const SECTIONS = {
@@ -26,8 +40,8 @@ export const SECTIONS = {
   },
   work: {
     idx: '[02] EdgeVerve',
-    title: 'And at work.',
-    sub: 'My day job is one shared engine used by many products. Here is a simplified view of a request passing through it.',
+    title: 'The Retrieval Engine.',
+    sub: 'My day job is one generic engine that 5+ interdependent banking products read their data through. Explore how it works, how it is designed, and how it ships. Simplified, no product internals.',
   },
   log: {
     idx: '[03] Experience',
@@ -43,13 +57,14 @@ export const SECTIONS = {
   contact: {
     idx: '[06] Contact',
     title: 'Open a session',
-    sub: 'Hiring, or just want to talk backend? My inbox is open.',
+    sub: 'Hiring, or just want to talk backend and distributed systems? My inbox is open.',
   },
 };
 
 export const ABOUT = [
-  "I'm a software engineer with over a year of experience in Java and Spring Boot backend development inside a core banking product ecosystem.",
-  "I work closely with downstream product teams so a reusable engine can be integrated and customized for each product, and I write the documentation that makes that possible. I'm strong in Git workflows, Maven and Agile/Scrum.",
+  "I'm a software engineer with 1.5+ years at EdgeVerve (Infosys), where I designed and own the Retrieval Engine: a generic, high-performance data-retrieval microservice used by 5+ interdependent products of an enterprise core banking platform.",
+  'I care about the whole path from code to production: clean abstractions so new products plug in without touching core code, queries tuned per use case, events on Kafka, a Redis cache in front of hot data, and a Jenkins pipeline that ships Docker images as Kubernetes pods on AWS EC2.',
+  "When something breaks across environments, I'm usually the one debugging it, and I write the integration guides that let product teams adopt the engine on their own.",
 ];
 
 export const EDUCATION = [

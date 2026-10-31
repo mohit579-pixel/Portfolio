@@ -28,7 +28,12 @@ export default function Footer({ copied, onCopy }) {
         </div>
         <div className="links">
           {links.map(([name, url]) => (
-            <a key={name} href={url} data-cur="GET">
+            <a
+              key={name}
+              href={url}
+              data-cur="GET"
+              {...(url.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+            >
               {name}
             </a>
           ))}

@@ -6,9 +6,9 @@ export const PROJECTS = [
     menuLabel: 'Open Dental system',
     stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'TensorFlow.js', 'JWT', 'MediaPipe'],
     built: [
-      'A dental care platform you can drive with voice commands and hand gestures, with appointment workflows built in.',
-      'It runs automated analysis on dental X-ray images.',
-      'I built the REST APIs and the JWT-based authentication, and integrated the machine-learning analysis.',
+      'A full-stack dental care platform: patients book and manage appointments, and dentists see schedules and patient records through role-specific dashboards.',
+      'Hands-free accessibility: voice commands and camera-based hand-gesture controls let users navigate and act without touching the screen.',
+      'An in-browser TensorFlow.js model analyzes uploaded dental images to flag likely conditions (e.g. cavities) for early screening. REST APIs on Node.js/Express are secured with JWT.',
     ],
   },
   {
@@ -30,8 +30,9 @@ export const PROJECTS = [
     menuLabel: 'Open Wanderlust',
     stack: ['Node.js', 'Express.js', 'MongoDB', 'EJS'],
     built: [
-      'A travel platform to explore hotels and read reviews.',
-      'Built with an MVC architecture: routes and views on Express and EJS, data in MongoDB.',
+      'A travel listing platform where users browse, create, edit and review hotel and stay listings.',
+      'Clean MVC architecture: models, routes/controllers and EJS views on Express, data in MongoDB.',
+      'Full CRUD for listings and reviews, with server-side validation and centralized error handling.',
     ],
   },
 ];

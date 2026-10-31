@@ -2,6 +2,7 @@ import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
 import Arch from './components/Arch';
 import CommandMenu from './components/CommandMenu';
 import Cursor from './components/Cursor';
+import EngineCore from './components/EngineCore';
 import ExperienceLog from './components/ExperienceLog';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -11,7 +12,7 @@ import ProjectGrid from './components/ProjectGrid';
 import ProjectPage from './components/ProjectPage';
 import Section from './components/Section';
 import Toolbox from './components/Toolbox';
-import { EMAIL } from './data/links';
+import { EMAIL, LINKS, RESUME_URL } from './data/links';
 import { ABOUT, EDUCATION, SECTIONS } from './data/profile';
 import { PROJECTS } from './data/projects';
 import { useRouter } from './lib/routing';
@@ -71,13 +72,16 @@ export default function App() {
 
   const menuItems = [
     { label: 'Go to Projects', hint: '01', run: () => goSection('projects') },
-    { label: 'Go to Backend work', hint: '02', run: () => goSection('work') },
+    { label: 'Go to Retrieval Engine', hint: '02', run: () => goSection('work') },
     { label: 'Go to Experience', hint: '03', run: () => goSection('log') },
     { label: 'Go to Toolbox', hint: '04', run: () => goSection('tools') },
     { label: 'Go to About', hint: '05', run: () => goSection('about') },
     { label: 'Go to Contact', hint: '06', run: () => goSection('contact') },
     ...PROJECTS.map((p) => ({ label: p.menuLabel, hint: p.id, run: () => openProject(p.id) })),
     { label: 'Copy email', hint: 'action', run: copy },
+    { label: 'Download resume', hint: 'action', run: () => window.open(RESUME_URL, '_blank') },
+    { label: 'Open GitHub', hint: 'link', run: () => window.open(LINKS.GitHub, '_blank') },
+    { label: 'Open LinkedIn', hint: 'link', run: () => window.open(LINKS.LinkedIn, '_blank') },
     {
       label: 'Send an email',
       hint: 'action',
@@ -110,6 +114,7 @@ export default function App() {
           <ProjectGrid />
         </Section>
         <Section id="work" {...SECTIONS.work}>
+          <EngineCore />
           <Arch />
         </Section>
         <Section id="log" {...SECTIONS.log}>
